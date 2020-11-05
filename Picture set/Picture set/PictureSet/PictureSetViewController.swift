@@ -16,21 +16,6 @@ class PictureSetViewController: UIViewController {
     imagViewPageControl.numberOfPages = images.count
     }
 
-    @IBAction func dthtju(_ sender: Any) {
-     
-    }
-    
-   
-
-}
-extension PictureSetViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     
-        return images.count
-      
-        
-    }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 
         imagViewPageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(imagViewPageControl.frame.width)
@@ -40,27 +25,30 @@ extension PictureSetViewController:UICollectionViewDelegate, UICollectionViewDat
 
         imagViewPageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(imagViewPageControl.frame.width)
     }
+   
+
+}
+extension PictureSetViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     return images.count
+     }
+   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       
-            let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "PictureSetCollectionViewCell", for: indexPath) as! PictureSetCollectionViewCell
-       cell.imagView.image = UIImage(named:images[indexPath.row])
+        let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "PictureSetCollectionViewCell", for: indexPath) as! PictureSetCollectionViewCell
+        cell.imagView.image = UIImage(named:images[indexPath.row])
         cell.imagView2.image = UIImage(named:images[indexPath.row])
         return cell
    }
+    
     func collectionView (_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat{
       return 0
-
-        }
+       }
     
-
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let indexPath =  IndexPath(item: indexPath.row, section: 0)
         let alert = BekijkEenFoto().alert(arry:images, indexPath: indexPath)
-        alert.actionCancel = {
       
-        }
-      
-        self.present(alert, animated: true)
+       self.present(alert, animated: true)
 
         }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

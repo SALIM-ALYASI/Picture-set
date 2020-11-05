@@ -15,15 +15,12 @@ class PictureDisplayService: UIViewController {
     @IBOutlet weak var imagViewPageControl: UIPageControl!
     @IBOutlet weak var btnCancel: UIButton!
     var lastIndexPathCitySelected:IndexPath = IndexPath()
-    var actionCancel: (()->Void)?
+
   override func viewDidLoad() {
         super.viewDidLoad()
         matrixarrangement()
         imagViewPageControl.numberOfPages = images.count
-        if actionCancel == nil {
-        btnCancel.removeFromSuperview()
-        }
-    }
+     }
     
     func matrixarrangement() {
         family.append(images[lastIndexPathCitySelected.row] )
@@ -32,7 +29,6 @@ class PictureDisplayService: UIViewController {
 
              family.append(images[t] )
             }
-
         }
     }
     
@@ -74,5 +70,4 @@ extension PictureDisplayService:UICollectionViewDelegate, UICollectionViewDataSo
      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
          return CGSize(width: imagesCollectionView.frame .width , height: self.imagesCollectionView.frame .height )
     }
-   
-}
+ }

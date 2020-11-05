@@ -103,7 +103,7 @@
 			path = "Start screen";
 			sourceTree = "<group>";
 		};
-		CE4D724E2552B12E007BA32A /* Alert */ = {
+		CE4D724E2552B12E007BA32A /*  Picture set */ = {
 			isa = PBXGroup;
 			children = (
 				CE4D72512552B12F007BA32A /* BekijkEenFoto.swift */,
@@ -111,7 +111,7 @@
 				CE4D72532552B12F007BA32A /* AlertStoryboard.storyboard */,
 				CE7B8BF62553301300EC06AA /* Cell.swift */,
 			);
-			path = Alert;
+			path = " Picture set";
 			sourceTree = "<group>";
 		};
 		CE5681D42551BEC700ECAB2A = {
@@ -144,7 +144,7 @@
 				CE7B8BE22553186C00EC06AA /* PictureSet */,
 				CE5681E92551BEC800ECAB2A /* Assets.xcassets */,
 				CE5681EB2551BEC800ECAB2A /* LaunchScreen.storyboard */,
-				CE4D724E2552B12E007BA32A /* Alert */,
+				CE4D724E2552B12E007BA32A /*  Picture set */,
 				CE5681EE2551BEC800ECAB2A /* Info.plist */,
 				CE571EA92552905400D2AF13 /* AlertView */,
 			);

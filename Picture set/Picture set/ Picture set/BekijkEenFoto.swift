@@ -8,7 +8,7 @@
 import UIKit
 
 class BekijkEenFoto{
-   var actionCancel: (()->Void)?
+ 
     
     func alert(arry:[String],indexPath:IndexPath)->PictureDisplayService{
         let storyBoard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
@@ -16,7 +16,7 @@ class BekijkEenFoto{
         alertVC.images = arry
         alertVC.lastIndexPathCitySelected = indexPath
        
-        alertVC.actionCancel = actionCancel
+     
         return alertVC
     }
     

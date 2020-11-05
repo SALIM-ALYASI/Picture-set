@@ -20,18 +20,6 @@ class StartScreenViewController: UIViewController,UIScrollViewDelegate{
         imagViewPageControl.numberOfPages = colorarry.count
   }
  
-
-}
-
-
-extension StartScreenViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     
-        return colorarry.count
-      
-        
-    }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 
         imagViewPageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(imagViewPageControl.frame.width)
@@ -41,24 +29,29 @@ extension StartScreenViewController:UICollectionViewDelegate, UICollectionViewDa
 
         imagViewPageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(imagViewPageControl.frame.width)
     }
+}
+
+extension StartScreenViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
+   
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     return colorarry.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      
-            let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "StartScreenCell", for: indexPath) as! StartScreenCell
+        let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "StartScreenCell", for: indexPath) as! StartScreenCell
         cell.imagView.image = UIImage(named:colorarry[indexPath.row])
         cell.titleLabel.text =  titlerarry[indexPath.row]
         cell.detailsarryLabel.text =  detailsarry[indexPath.row]
         return cell
    }
+    
     func collectionView (_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat{
       return 0
 
         }
     
-
- 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-      
-        return CGSize(width: imagesCollectionView.frame .width , height: self.imagesCollectionView.frame .height )
+      return CGSize(width: imagesCollectionView.frame .width , height: self.imagesCollectionView.frame .height )
     }
    
 }
