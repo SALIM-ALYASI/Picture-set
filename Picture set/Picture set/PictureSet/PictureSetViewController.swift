@@ -46,8 +46,12 @@ extension PictureSetViewController:UICollectionViewDelegate, UICollectionViewDat
        }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let alert = BekijkEenFoto().alert(arry:images, indexPath: indexPath)
-      
+        
+//      هدا كودك
+        let indexPathrow = IndexPath(item:indexPath.row , section:0)
+//        هدا كود نقل بيانات
+        let alert = BekijkEenFoto().alert(arry:images, indexPath: indexPathrow  )
+
        self.present(alert, animated: true)
 
         }

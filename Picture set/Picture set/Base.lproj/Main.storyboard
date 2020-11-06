@@ -204,12 +204,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7OW-Je-3Cg">
-                                <rect key="frame" x="50" y="832" width="314" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="rXo-z1-fAT"/>
-                                </constraints>
-                            </pageControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7LO-Pd-caB">
                                 <rect key="frame" x="0.0" y="88" width="414" height="734"/>
                                 <color key="backgroundColor" red="0.54550600049999998" green="0.66319495439999998" blue="0.66385763880000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -249,24 +243,13 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB0-hG-WrX">
-                                                            <rect key="frame" x="100" y="737" width="198" height="36"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            <state key="normal" title="تخطي">
-                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                        </button>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="H9b-Bh-Zdj" secondAttribute="trailing" constant="40" id="2Ii-3f-fzO"/>
                                                         <constraint firstItem="H9b-Bh-Zdj" firstAttribute="top" secondItem="bbs-9a-7u0" secondAttribute="bottom" constant="50" id="2RT-1x-gsc"/>
-                                                        <constraint firstItem="hB0-hG-WrX" firstAttribute="centerX" secondItem="CBl-CB-rh6" secondAttribute="centerX" id="91e-FF-eE0"/>
-                                                        <constraint firstAttribute="trailing" secondItem="hB0-hG-WrX" secondAttribute="trailing" constant="100" id="HWQ-8c-uXb"/>
-                                                        <constraint firstItem="hB0-hG-WrX" firstAttribute="leading" secondItem="CBl-CB-rh6" secondAttribute="leading" constant="100" id="JML-wB-xgu"/>
                                                         <constraint firstItem="bbs-9a-7u0" firstAttribute="top" secondItem="rMl-Jh-hSX" secondAttribute="bottom" constant="50" id="M2E-C4-axN"/>
                                                         <constraint firstAttribute="trailing" secondItem="bbs-9a-7u0" secondAttribute="trailing" constant="50" id="RfB-6M-yjK"/>
                                                         <constraint firstItem="H9b-Bh-Zdj" firstAttribute="leading" secondItem="CBl-CB-rh6" secondAttribute="leading" constant="40" id="a2q-3h-2lp"/>
-                                                        <constraint firstAttribute="bottom" secondItem="hB0-hG-WrX" secondAttribute="bottom" constant="10" id="gno-4t-bpL"/>
                                                         <constraint firstItem="bbs-9a-7u0" firstAttribute="leading" secondItem="CBl-CB-rh6" secondAttribute="leading" constant="50" id="hXa-lb-gaX"/>
                                                         <constraint firstItem="rMl-Jh-hSX" firstAttribute="top" secondItem="CBl-CB-rh6" secondAttribute="top" constant="100" id="kXN-iz-h5B"/>
                                                         <constraint firstItem="rMl-Jh-hSX" firstAttribute="centerX" secondItem="CBl-CB-rh6" secondAttribute="centerX" id="pz5-dG-bao"/>
@@ -294,14 +277,33 @@
                                     <outlet property="delegate" destination="B9K-KR-Brg" id="FVu-Wf-3vF"/>
                                 </connections>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7OW-Je-3Cg">
+                                <rect key="frame" x="50" y="832" width="314" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rXo-z1-fAT"/>
+                                </constraints>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB0-hG-WrX">
+                                <rect key="frame" x="108" y="786" width="198" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="AXF-el-94D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="تخطي">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a8T-1V-bhO"/>
                         <color key="backgroundColor" red="0.54550600049999998" green="0.66319495439999998" blue="0.66385763880000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a8T-1V-bhO" firstAttribute="trailing" secondItem="7LO-Pd-caB" secondAttribute="trailing" id="0UA-RY-2fP"/>
+                            <constraint firstItem="7OW-Je-3Cg" firstAttribute="top" secondItem="hB0-hG-WrX" secondAttribute="bottom" constant="10" id="1KX-cc-Wi8"/>
                             <constraint firstItem="7OW-Je-3Cg" firstAttribute="top" secondItem="7LO-Pd-caB" secondAttribute="bottom" constant="10" id="3Xs-J4-i3m"/>
+                            <constraint firstItem="a8T-1V-bhO" firstAttribute="trailing" secondItem="hB0-hG-WrX" secondAttribute="trailing" constant="108" id="9sF-zj-scB"/>
                             <constraint firstItem="7LO-Pd-caB" firstAttribute="leading" secondItem="a8T-1V-bhO" secondAttribute="leading" id="TMY-uQ-tpc"/>
                             <constraint firstItem="7OW-Je-3Cg" firstAttribute="leading" secondItem="a8T-1V-bhO" secondAttribute="leading" constant="50" id="mTj-r0-HFa"/>
+                            <constraint firstItem="hB0-hG-WrX" firstAttribute="leading" secondItem="a8T-1V-bhO" secondAttribute="leading" constant="108" id="sgl-n2-pDH"/>
                             <constraint firstItem="a8T-1V-bhO" firstAttribute="trailing" secondItem="7OW-Je-3Cg" secondAttribute="trailing" constant="50" id="v16-Ma-od7"/>
                             <constraint firstItem="7LO-Pd-caB" firstAttribute="top" secondItem="a8T-1V-bhO" secondAttribute="top" id="xGR-RY-bqP"/>
                             <constraint firstItem="7OW-Je-3Cg" firstAttribute="centerX" secondItem="Szr-1P-g44" secondAttribute="centerX" id="xoC-6a-fRL"/>

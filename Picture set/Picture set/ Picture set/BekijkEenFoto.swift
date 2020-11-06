@@ -13,7 +13,7 @@ class BekijkEenFoto{
     func alert(arry:[String],indexPath:IndexPath)->PictureDisplayService{
         let storyBoard = UIStoryboard(name: "AlertStoryboard", bundle: .main)
         let alertVC = storyBoard.instantiateViewController(withIdentifier: "AlertVC") as! PictureDisplayService
-        alertVC.images = arry
+        alertVC.imageString = arry
         alertVC.lastIndexPathCitySelected = indexPath
        
      
