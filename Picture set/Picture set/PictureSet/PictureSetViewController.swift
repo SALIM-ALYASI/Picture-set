@@ -8,7 +8,7 @@
 import UIKit
 
 class PictureSetViewController: UIViewController {
-    var images: [String] = ["1","2","3","4","5","6"]
+    var images: [String] = ["1","2","3","4","5","6","7"]
     @IBOutlet weak var imagViewPageControl: UIPageControl!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -47,10 +47,8 @@ extension PictureSetViewController:UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-//      هدا كودك
-        let indexPathrow = IndexPath(item:indexPath.row , section:0)
 //        هدا كود نقل بيانات
-        let alert = BekijkEenFoto().alert(arry:images, indexPath: indexPathrow  )
+        let alert = BekijkEenFoto().alert(arry:images, indexPath: indexPath.row   )
 
        self.present(alert, animated: true)
 

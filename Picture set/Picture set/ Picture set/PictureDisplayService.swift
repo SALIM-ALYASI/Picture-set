@@ -9,32 +9,29 @@ import UIKit
 
 class PictureDisplayService: UIViewController {
     var imageString = [String]()
-    //var family = [String]()
-    
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     @IBOutlet weak var imagViewPageControl: UIPageControl!
     @IBOutlet weak var btnCancel: UIButton!
-    var lastIndexPathCitySelected:IndexPath = IndexPath()
+    var lastIndexPathCitySelected = Int()
 
   override func viewDidLoad() {
         super.viewDidLoad()
-      //  matrixarrangement()
-    imagesCollectionView.collectionViewLayout.invalidateLayout()
-        imagViewPageControl.numberOfPages = imageString.count
-    // هدا كودك
-   imagesCollectionView.scrollToItem(at: lastIndexPathCitySelected , at: .top, animated: true)
+    //  matrixarrangement()
+    //-------------------------------------
+/*
+    automaticallyAdjustsScrollViewInsets = false
+    scrollToTopWithoutAnimation()
+ */
      }
-//
-//    func matrixarrangement() {
-//        family.append(images[lastIndexPathCitySelected.row] )
-//        for t in 0 ..< images.count {
-//            if images[t] != images[lastIndexPathCitySelected.row]{
-//
-//             family.append(images[t] )
-//            }
-//        }
-//    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        imagesCollectionView.layoutIfNeeded()
+        let indexPathrow = IndexPath(item:lastIndexPathCitySelected , section:0)
+        imagesCollectionView.scrollToItem(at: indexPathrow , at: .top, animated: true)
+        imagViewPageControl.numberOfPages = imageString.count
+    }
+    
+  
     @IBAction func panGestureRecognizer(_ sender: UIPanGestureRecognizer) {
         dismiss(animated: true)
       
@@ -59,12 +56,15 @@ class PictureDisplayService: UIViewController {
 extension PictureDisplayService:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      return imageString.count
+        return imageString.count
+     // return family.count
      }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = imagesCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! Cell
-       cell.imagView.image = UIImage(named:imageString[indexPath.row])
+//        imageString
+        cell.imagView.image = UIImage(named:imageString[indexPath.row])
+      // cell.imagView.image = UIImage(named:family[indexPath.row])
        return cell
    }
     
@@ -75,7 +75,7 @@ extension PictureDisplayService:UICollectionViewDelegate, UICollectionViewDataSo
      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
          return CGSize(width: imagesCollectionView.frame .width , height: self.imagesCollectionView.frame .height)
     }
-    func collectionView(collectionView: UICollectionView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 44
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
     }
  }

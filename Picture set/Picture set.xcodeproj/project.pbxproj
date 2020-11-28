@@ -10,6 +10,7 @@
 		CE4D72562552B12F007BA32A /* BekijkEenFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D72512552B12F007BA32A /* BekijkEenFoto.swift */; };
 		CE4D72572552B12F007BA32A /* PictureDisplayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D72522552B12F007BA32A /* PictureDisplayService.swift */; };
 		CE4D72582552B12F007BA32A /* AlertStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D72532552B12F007BA32A /* AlertStoryboard.storyboard */; };
+		CE518AEB255921BD00389EEC /* NetStatusDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE518AEA255921BD00389EEC /* NetStatusDemo.swift */; };
 		CE5681E12551BEC700ECAB2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5681E02551BEC700ECAB2A /* AppDelegate.swift */; };
 		CE5681E32551BEC700ECAB2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5681E22551BEC700ECAB2A /* SceneDelegate.swift */; };
 		CE5681E52551BEC700ECAB2A /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5681E42551BEC700ECAB2A /* StartScreenViewController.swift */; };
@@ -47,6 +48,7 @@
 		CE4D72512552B12F007BA32A /* BekijkEenFoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BekijkEenFoto.swift; sourceTree = "<group>"; };
 		CE4D72522552B12F007BA32A /* PictureDisplayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureDisplayService.swift; sourceTree = "<group>"; };
 		CE4D72542552B12F007BA32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AlertStoryboard.storyboard; sourceTree = "<group>"; };
+		CE518AEA255921BD00389EEC /* NetStatusDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetStatusDemo.swift; sourceTree = "<group>"; };
 		CE5681DD2551BEC700ECAB2A /* Picture set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picture set.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5681E02551BEC700ECAB2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5681E22551BEC700ECAB2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				CE4D72512552B12F007BA32A /* BekijkEenFoto.swift */,
 				CE4D72522552B12F007BA32A /* PictureDisplayService.swift */,
 				CE4D72532552B12F007BA32A /* AlertStoryboard.storyboard */,
+				CE518AEA255921BD00389EEC /* NetStatusDemo.swift */,
 				CE7B8BF62553301300EC06AA /* Cell.swift */,
 			);
 			path = " Picture set";
@@ -328,6 +331,7 @@
 				CE7B8BEF2553299F00EC06AA /* StartScreenCell.swift in Sources */,
 				CE5681E12551BEC700ECAB2A /* AppDelegate.swift in Sources */,
 				CE7B8BF72553301300EC06AA /* Cell.swift in Sources */,
+				CE518AEB255921BD00389EEC /* NetStatusDemo.swift in Sources */,
 				CE4D72562552B12F007BA32A /* BekijkEenFoto.swift in Sources */,
 				CE5681E32551BEC700ECAB2A /* SceneDelegate.swift in Sources */,
 			);

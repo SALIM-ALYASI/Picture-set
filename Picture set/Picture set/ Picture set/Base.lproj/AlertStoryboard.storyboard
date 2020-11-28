@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -70,9 +70,9 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aa6-yH-0kT">
-                                <rect key="frame" x="50" y="848" width="314" height="28"/>
+                                <rect key="frame" x="10" y="858" width="394" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="zVj-Xa-R2G"/>
+                                    <constraint firstAttribute="height" constant="28" id="ZVg-lS-0Qp"/>
                                 </constraints>
                             </pageControl>
                         </subviews>
@@ -80,15 +80,15 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="bBF-jc-vJH" firstAttribute="top" secondItem="AMd-yv-e3K" secondAttribute="bottom" constant="10" id="4Yy-Op-0Ot"/>
-                            <constraint firstItem="aa6-yH-0kT" firstAttribute="top" secondItem="bBF-jc-vJH" secondAttribute="bottom" constant="5" id="B4y-vS-CFx"/>
-                            <constraint firstItem="bBF-jc-vJH" firstAttribute="trailing" secondItem="c2B-6n-zj6" secondAttribute="trailing" id="DXd-QJ-9Va"/>
-                            <constraint firstItem="bBF-jc-vJH" firstAttribute="leading" secondItem="c2B-6n-zj6" secondAttribute="leading" id="ORd-Nl-DFR"/>
-                            <constraint firstItem="c2B-6n-zj6" firstAttribute="trailing" secondItem="aa6-yH-0kT" secondAttribute="trailing" constant="50" id="Tvc-4Y-kHZ"/>
-                            <constraint firstItem="aa6-yH-0kT" firstAttribute="leading" secondItem="c2B-6n-zj6" secondAttribute="leading" constant="50" id="cYW-CW-V41"/>
+                            <constraint firstItem="c2B-6n-zj6" firstAttribute="trailing" secondItem="aa6-yH-0kT" secondAttribute="trailing" constant="10" id="5JO-mJ-z0D"/>
+                            <constraint firstItem="bBF-jc-vJH" firstAttribute="trailing" secondItem="c2B-6n-zj6" secondAttribute="trailing" id="GBL-Uz-qnm"/>
+                            <constraint firstItem="bBF-jc-vJH" firstAttribute="top" secondItem="AMd-yv-e3K" secondAttribute="bottom" constant="10" id="Kpj-Y6-9qh"/>
+                            <constraint firstItem="bBF-jc-vJH" firstAttribute="leading" secondItem="c2B-6n-zj6" secondAttribute="leading" id="e7e-VP-Kfe"/>
                             <constraint firstItem="AMd-yv-e3K" firstAttribute="top" secondItem="X4O-fU-s1o" secondAttribute="top" constant="20" id="fcz-I3-GWc"/>
-                            <constraint firstAttribute="bottom" secondItem="aa6-yH-0kT" secondAttribute="bottom" constant="20" id="ij3-w3-FSD"/>
+                            <constraint firstItem="aa6-yH-0kT" firstAttribute="leading" secondItem="c2B-6n-zj6" secondAttribute="leading" constant="10" id="lMH-Vt-gMC"/>
+                            <constraint firstAttribute="bottom" secondItem="aa6-yH-0kT" secondAttribute="bottom" constant="10" id="nwJ-Ph-Zsi"/>
                             <constraint firstItem="AMd-yv-e3K" firstAttribute="leading" secondItem="X4O-fU-s1o" secondAttribute="leading" constant="10" id="qkT-lF-d5f"/>
+                            <constraint firstItem="aa6-yH-0kT" firstAttribute="top" secondItem="bBF-jc-vJH" secondAttribute="bottom" constant="15" id="uxT-vO-Cth"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ilZ-wj-CZy" appends="YES" id="g2y-tw-bJt"/>
